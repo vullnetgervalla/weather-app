@@ -1,0 +1,89 @@
+.forecastContainer {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff22;
+    align-self: center;
+    margin-top: 2rem;
+    border-radius: 30px;
+}
+
+
+.header {
+    margin: 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.day {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0 1rem;
+}
+
+.day:not(.dayHeader) {
+    border-top: 1px solid black;
+}
+
+.day>span {
+    flex: 1;
+}
+
+.dayHeader {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.fillerImg {
+    width: 3rem;
+}
+
+.icon {
+    width: 3rem;
+}
+
+@media (max-width: 600px) {
+    .forecastContainer {
+        width: 100%;
+        padding: 0 1rem 0.4rem 1rem;
+    }
+
+    .forecast {
+        overflow-x: auto;
+    }
+
+    .forecast:last-child {
+        padding-bottom: 0.6rem;
+    }
+
+    .forecast::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .forecast::-webkit-scrollbar-thumb {
+        background: #eeeeee88;
+        border-radius: 6px;
+    }
+
+
+    .forecast::-webkit-scrollbar-thumb:hover {
+        background: #eee;
+    }
+
+    .day {
+        flex-wrap: nowrap;
+        min-width: fit-content;
+        gap: 2rem;
+        margin: 0;
+    }
+
+    .day>span {
+        flex: none;
+        padding: 0;
+        margin: 0;
+        width: 5rem;
+    }
+
+}

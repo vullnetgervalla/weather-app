@@ -1,0 +1,29 @@
+.current {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -5rem;
+}
+
+.image>img {
+    width: 5rem;
+}
+
+.content {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.temperature {
+    display: flex;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.temperature>span {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}

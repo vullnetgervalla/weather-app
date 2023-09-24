@@ -1,0 +1,140 @@
+.searchContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 40%;
+    height: 6rem;
+}
+
+.searchInput {
+    font-family: inherit;
+    font-size: 1.5rem;
+    background-color: #f4f2f2;
+    border: none;
+    padding: 0.7rem 4.3rem 0.7rem 2rem;
+    border-radius: 40px;
+    width: 100%;
+    margin-right: -4rem;
+    height: 3rem;
+}
+
+.searchInput:hover,
+.searchInput:focus {
+    box-shadow: 0 0 1em #00000013;
+}
+
+.searchInput:focus {
+    outline: none;
+    background-color: #f0eeee;
+}
+
+.searchInput::-webkit-input-placeholder {
+    font-weight: 100;
+    color: #aaa;
+}
+
+.searchInput:focus+.searchButton>img {
+    filter: none;
+}
+
+.searchButton {
+    border: none;
+    background-color: transparent;
+}
+
+.searchButton:hover {
+    cursor: pointer;
+}
+
+.searchButton>img {
+    width: 2rem;
+    filter: invert(77%) sepia(0%) saturate(371%) hue-rotate(269deg) brightness(89%) contrast(89%);
+}
+
+.searchButton>img:hover {
+    filter: none;
+}
+
+.list {
+    width: 60%;
+    padding-left: 0;
+}
+
+.list>li {
+    list-style-type: none;
+    height: 3rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.list>li:hover {
+    background-color: #69a8eb;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.error {
+    color: red;
+    margin-top: 5rem;
+    font-size: 1.5rem;
+}
+
+.notFound {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+}
+
+.loader {
+    margin-top: 5rem;
+    width: 120px;
+    height: 60px;
+    border-radius: 200px 200px 0 0;
+    mask: repeating-radial-gradient(farthest-side at bottom, #0000 0, #000 1px 12%, #0000 calc(12% + 1px) 20%);
+    -webkit-mask: repeating-radial-gradient(farthest-side at bottom, #0000 0, #000 1px 12%, #0000 calc(12% + 1px) 20%);
+    background: radial-gradient(farthest-side at bottom, #000 0 95%, #0000 0) bottom/0% 0% no-repeat #ddd;
+    animation: l10 2s infinite steps(6);
+}
+
+@keyframes l10 {
+    100% {
+        background-size: 120% 120%
+    }
+}
+
+@media (max-width: 600px) {
+    .search {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .searchContainer {
+        position: relative;
+    }
+
+    .searchInput {
+        padding: 0.7rem 3.2rem 0.7rem 2rem;
+        margin-right: 0;
+    }
+
+    .searchButton {
+        margin-left: 0;
+        position: absolute;
+        right: 0.5rem;
+    }
+}
