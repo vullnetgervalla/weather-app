@@ -21,8 +21,8 @@ export default function Weather(props: WeatherProps) {
                     <Today time={props.weatherData.location.localtime} today={props.weatherData.forecast.forecastday[0]} tomorrow={props.weatherData.forecast.forecastday[1]} unit={props.unit} />
                     <Forecast data={props.weatherData.forecast.forecastday} unit={props.unit} />
                     <div className={styles.poweredby}>
-                        Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
-                        <div>Background designed by <a href="http://www.freepik.com">starline / Freepik</a></div>
+                        Powered by <a href="https://www.weatherapi.com/" title="Free Weather API" target='_blank'>WeatherAPI.com</a>
+                        <div>Background designed by <a href="https://www.freepik.com/" target='_blank'>starline / Freepik</a></div>
                     </div>
                 </div>}
         </div>

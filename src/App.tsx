@@ -39,7 +39,7 @@ function App() {
             weatherLoading: true,
         })
 
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${name}&days=${forecastDays}`)
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${name}&days=${forecastDays}`)
         if (!response.ok) {
             console.error("Error fetching weather data")
             return

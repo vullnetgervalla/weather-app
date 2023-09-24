@@ -41,7 +41,7 @@ export default function Search(props: SearchProps) {
         props.updateDisplayCities(true)
         setStatus({ error: false, loading: true, searched: true })
 
-        const response = await fetch(`http://api.weatherapi.com/v1/search.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${name}`)
+        const response = await fetch(`https://api.weatherapi.com/v1/search.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${name}`)
         if (!response.ok) {
             console.error("Error fetching names data")
             setStatus(prev => ({ ...prev, error: true }))
