@@ -14,7 +14,7 @@ export default function Forecast(props: ForecastProps) {
     ))
     return (
         <div className={styles.forecastContainer}>
-            <div className={styles.header}>10 Day Forecast</div>
+            <div className={styles.header}>Forecast</div>
             <div className={styles.forecast}>
                 <div className={`${styles.day} ${styles.dayHeader}`}>
                     <span>Day</span>
